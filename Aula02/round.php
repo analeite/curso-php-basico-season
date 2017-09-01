@@ -1,10 +1,12 @@
 <?php
 
-$float = round(1.3); //1
-$float = round(1.3, 1); //1.3
-$float = round(1.333, 1); //1.3
-$float = round(1.3533, 1); //1.4
-$float = round(1.333, 2); //1.33
-$float = round(1.33333, 2, PHP_ROUND_HALF_DOWN); //1.33
+$float = round(6.5); //7
+$float = round(6.4); //6
+$float = round(6.44, 1); //6.4
+$float = round(6.45, 1); //6.5
 
-echo $float.'<br';
+$float = round(6.45, 1, PHP_ROUND_HALF_DOWN); //6.4
+////só arredonda quando o segundo número depois da vírgula for 5
+
+
+echo $float.'<br>';
