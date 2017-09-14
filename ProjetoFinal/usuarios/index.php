@@ -1,6 +1,7 @@
 <?php
 require_once ('../partials/header.php');
-require_once ('usuarios-init.php');
+require_once ('usuarios-dao.php');
+$usuarios=all();
 ?>
 
 <div class="container">
