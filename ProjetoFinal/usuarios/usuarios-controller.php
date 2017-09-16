@@ -17,12 +17,12 @@ if ($action == 'store') {
 
     if (existeErro()) {
         header("Location: http://localhost/ProjetoFinal/usuarios/criar-form.php");
-    } elseif (store($usuario)) {
+    } elseif (!store($usuario)) {
         store($usuario);
+        header("Location: http://localhost/ProjetoFinal/usuarios/criar-form.php");
+    } else {
         success("O usuário " . $usuario['nome'] . " foi cadastrado com sucesso");
         header("Location: http://localhost/ProjetoFinal/usuarios/");
-    } else {
-        header("Location: http://localhost/ProjetoFinal/usuarios/criar-form.php");
     }
 } elseif ($action == 'destroy') {
     destroy($id);
